@@ -1,31 +1,31 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
 
 public class Main extends Frame {
-    Button buttons[];
-
     public Main() {
-        buttons = new Button[5];
-        buttons[0]=new Button();
-        buttons[1]=new Button();
-        buttons[0].setSize(50,50);
-        add(buttons[0]);
-        add(buttons[1]);
-        setLayout(new BoxLayout(this,BoxLayout.X_AXIS));
-        setVisible(true);
-        setSize(400,500);
-        addWindowListener(new WindowAdapter() {
-            @Override
-            public void windowClosing(WindowEvent e) {
-                super.windowClosing(e);
-                System.exit(0);
-            }
-        });
-    }
+        JFrame frame=new JFrame();
+        JButton b1=new JButton("SDFASDFSA");
+        JButton b2=new JButton();
+        JButton b3=new JButton();
+        JButton b4=new JButton();
+        JButton b5=new JButton();
+        JPanel controlpanel=new JPanel();
+        frame.add(b2,BorderLayout.SOUTH);
+        frame.add(b3,BorderLayout.EAST);
+        frame.add(b4,BorderLayout.NORTH);
+        frame.add(b5,BorderLayout.CENTER);
 
+        JButton b21=new JButton("sdfasdf");
+        JButton b22=new JButton("sadfasdf");
+        controlpanel.add(b21);
+        controlpanel.add(b22);
+
+        frame.add(controlpanel,BorderLayout.WEST);
+        frame.setSize(500,400);
+        frame.setVisible(true);
+
+    }
     public static void main(String[] args) {
-        Main box=new Main();
+        Main border=new Main();
     }
 }
